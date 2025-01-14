@@ -1,41 +1,40 @@
 #level-1 {
   display: grid;
-  grid-template-columns: 2;
-  grid-template-rows: 3;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 
   .peas {
-    grid: 1 / 2 / 1 / 2;
+    grid: 1 / 2;
   }
-
+  /*
   .onions {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
   }
 
   .tomatoes {
-    grid: 2 / 3 / 1 / 2;
+    grid-area: 2 / 1;
   }
 
   .lettuce {
-    grid: 2 / 3 / 2 / 3;
+    grid-area: 2 / 2;
   }
 
   .carrots {
-    grid: 1 / 2 / 3 / 4;
-  }
+    grid-area: 3 / 1;
+  }*/
 }
 
 #level-2 {
   display: grid;
-  grid-template-rows: 3;
-  grid-template-columns: 2;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 
   .peas {
-    grid-column-start: 1 / span 2;
-    grid-row-start: 1;
+    grid-area: 1 / 1 / span 1 / span 2;
   }
 
-  .onions {
+  /* .onions {
     grid-area: 2 / 1;
   }
 
@@ -49,5 +48,27 @@
 
   .carrots {
     grid-area: 3 / 2;
+  } */
+}
+
+#level-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  .peas {
+    grid-area: 1 / 1;
+  }
+
+  .onions {
+    grid-area: 1 / 2 / span 1 / span 2;
+  }
+
+  .tomatoes {
+    grid-area: 2 / 1 / span 1 / span 2;
+  }
+
+  .carrots {
+    grid-area: 3 / 1 / span 1 / span 3;
   }
 }
